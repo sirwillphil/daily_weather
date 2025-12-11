@@ -1,0 +1,11 @@
+# Airflow
+apache-airflow==2.7.1
+
+# Data processing
+pandas
+requests
+
+# Dashboard
+streamlit
+altair
+plotly

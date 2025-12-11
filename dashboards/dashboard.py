@@ -5,6 +5,11 @@ import os
 
 # Path to processed CSV
 csv_path = os.path.join(os.path.dirname(__file__), "../data/processed/weather_clean.csv")
+csv_path = os.path.abspath(csv_path)
+
+print("Looking for CSV at:", csv_path)
+print("Exists:", os.path.exists(csv_path))
+
 
 # Load CSV
 df = pd.read_csv(csv_path)

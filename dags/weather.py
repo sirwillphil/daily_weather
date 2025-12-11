@@ -6,7 +6,7 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 from datetime import datetime
 
-BASE_DIR = "/Users/g/daily_weather"
+BASE_DIR = "/opt/airflow/"
 
 # Define what your task does
 def get_weather():
@@ -51,7 +51,7 @@ with DAG(
     
     # Create a task
     task1 = PythonOperator(
-        task_id='my_task',
+        task_id='get_weather',
         python_callable=get_weather,
     )
 
